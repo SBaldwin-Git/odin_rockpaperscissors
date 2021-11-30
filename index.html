@@ -20,9 +20,9 @@
             if (playerSelection == "rock") {
 
                 if ((playerSelection == "rock") && (computerSelection == "paper")) {
-                    result = "Computer's paper beats player rock!"
+                    result = "Computer's paper beats Player's rock!"
                 } else if ((playerSelection == "rock") && (computerSelection == "scissors")) {
-                    result = "Player's rock beats computer's scissors!"
+                    result = "Player's rock beats Computer's scissors!"
                 } else if ((playerSelection == "rock") && (computerSelection == "rock")) {
                     result = "Draw! Both have chosen rock!"
                 }
@@ -31,9 +31,9 @@
             if (playerSelection == "paper") {
 
                 if ((playerSelection == "paper") && (computerSelection == "scissors")) {
-                    result = "Computer's scissors beats player paper!"
+                    result = "Computer's scissors beats Player's paper!"
                 } else if ((playerSelection == "paper") && (computerSelection == "rock")) {
-                    result = "Player's paper beats computer's rock!"
+                    result = "Player's paper beats Computer's rock!"
                 } else if ((playerSelection == "paper") && (computerSelection == "paper")) {
                     result = "Draw! Both have chosen paper!"
                 }
@@ -42,13 +42,14 @@
             if (playerSelection == "scissors") {
 
                 if ((playerSelection == "scissors") && (computerSelection == "rock")) {
-                    result = "Computer's rock beats player scissors!"
+                    result = "Computer's rock beats Player's scissors!"
                 } else if ((playerSelection == "scissors") && (computerSelection == "paper")) {
-                    result = "Player's scissors beats computer's paper!"
+                    result = "Player's scissors beats Computer's paper!"
                 } else if ((playerSelection == "rock") && (computerSelection == "scissors")) {
                     result = "Draw! Both have chosen scissors!"
                 }
             }
+            return result;
         }
 
         const playerSelection = prompt("Please pick Rock, Paper or Scissors.").toLowerCase();
@@ -56,8 +57,9 @@
 
         console.log("The player chose " + playerSelection);
         console.log("The computer chose " + computerSelection);
+        console.log(playRound(playerSelection, computerSelection));
 
-        
+
         
     </script>
 </head>
