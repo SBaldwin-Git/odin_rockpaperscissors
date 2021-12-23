@@ -17,8 +17,25 @@ button {
     border-radius: 20px;
     border-style: solid;
     border-color: black;
+    transition-duration: 0.4s;
 }
 
 button:hover{
     background-color: hotpink;
+}
+
+button:active{
+    background-color: white;
+}
+
+#textContainer{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#scoreContainer, #roundContainer{
+    width: 20%;
+    height: 200px;
+    text-align: center;
 }
