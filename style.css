@@ -1,0 +1,24 @@
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+}
+
+button {
+    height: 500px;
+    width: 500px;
+    font-size: 100px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: black;
+}
+
+button:hover{
+    background-color: hotpink;
+}
