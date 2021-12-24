@@ -69,4 +69,4 @@ console.log("Player Wins: " + playerWins);
 console.log("Computer Wins " + computerWins);
 console.log("Draws " + draws);
 
-game();
+//game();
