@@ -1,16 +1,33 @@
+//Score Variables
 let playerWins = 0;
 let computerWins = 0;
 let draws = 0;
 
+//Buttons Variables
+
+//Prompts player to select and calls playRound Function
+function game() {
+
+    const playerSelection = prompt("Please pick Rock, Paper or Scissors.").toLowerCase();
+    const computerSelection = computerPlay();
+
+    console.log("The player chose " + playerSelection);
+    console.log("The computer chose " + computerSelection);
+    console.log(playRound(playerSelection, computerSelection));
+}
+
+//Returns rock, paper or scissors for the computer
 function computerPlay() {
     let rps = ['rock', 'paper', 'scissors'];
     let result = rps[Math.floor(Math.random() * rps.length)];
     return result
 }
 
+//Compares player and computer selection and returns result as string
 function playRound(playerSelection, computerSelection) {
     let result = null;
 
+    //Rock
     if (playerSelection == "rock") {
 
         if ((playerSelection == "rock") && (computerSelection == "paper")) {
@@ -25,6 +42,7 @@ function playRound(playerSelection, computerSelection) {
         }
     }
 
+    //Paper
     if (playerSelection == "paper") {
 
         if ((playerSelection == "paper") && (computerSelection == "scissors")) {
@@ -39,6 +57,7 @@ function playRound(playerSelection, computerSelection) {
         }
     }
 
+    //Scissors
     if (playerSelection == "scissors") {
 
         if ((playerSelection == "scissors") && (computerSelection == "rock")) {
@@ -55,18 +74,7 @@ function playRound(playerSelection, computerSelection) {
     return result;
 }
 
-function game() {
-
-    const playerSelection = prompt("Please pick Rock, Paper or Scissors.").toLowerCase();
-    const computerSelection = computerPlay();
-
-    console.log("The player chose " + playerSelection);
-    console.log("The computer chose " + computerSelection);
-    console.log(playRound(playerSelection, computerSelection));
-}
-
+//Prints results to console
 console.log("Player Wins: " + playerWins);
 console.log("Computer Wins " + computerWins);
 console.log("Draws " + draws);
-
-//game();
