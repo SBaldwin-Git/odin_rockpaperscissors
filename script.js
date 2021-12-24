@@ -3,6 +3,11 @@ let playerWins = 0;
 let computerWins = 0;
 let draws = 0;
 
+//Current Score and Round Result DOM
+let playerScore = document.querySelector('#playerScore');
+let computerScore = document.querySelector('#computerScore');;
+let roundResult = document.querySelector('#roundResult');;
+
 //Add Event Listeners
 document.querySelector('#rockBtn').addEventListener("click", function (){
     game("rock");
@@ -80,6 +85,9 @@ function playRound(playerSelection, computerSelection) {
             draws++
         }
     }
+    playerScore.textContent = playerWins;
+    computerScore.textContent = computerWins;
+    roundResult.textContent = result;
     return result;
 }
 
