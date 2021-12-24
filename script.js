@@ -7,15 +7,16 @@ let draws = 0;
 let playerScore = document.querySelector('#playerScore');
 let computerScore = document.querySelector('#computerScore');;
 let roundResult = document.querySelector('#roundResult');;
+let gameResult = document.querySelector('#gameResult');
 
 //Add Event Listeners
-document.querySelector('#rockBtn').addEventListener("click", function (){
+document.querySelector('#rockBtn').addEventListener("click", function() {
     game("rock");
 });
-document.querySelector('#paperBtn').addEventListener("click",function (){
+document.querySelector('#paperBtn').addEventListener("click", function() {
     game("paper");
 });
-document.querySelector('#scissorsBtn').addEventListener("click", function (){
+document.querySelector('#scissorsBtn').addEventListener("click", function() {
     game("scissors");
 });
 
@@ -85,9 +86,25 @@ function playRound(playerSelection, computerSelection) {
             draws++
         }
     }
+
+    if(playerWins == 5){
+        gameResult.textContent = "PLAYER WINS";
+        document.querySelector('#rockBtn').disabled = true;
+        document.querySelector('#paperBtn').disabled = true;
+        document.querySelector('#scissorsBtn').disabled = true;
+    } 
+    
+    else if (computerWins == 5){
+        gameResult.textContent = "COMPUTER WINS";
+        document.querySelector('#rockBtn').disabled = true;
+        document.querySelector('#paperBtn').disabled = true;
+        document.querySelector('#scissorsBtn').disabled = true;
+    }
+    //Updates DOM to match current results
     playerScore.textContent = playerWins;
     computerScore.textContent = computerWins;
     roundResult.textContent = result;
+
     return result;
 }
 

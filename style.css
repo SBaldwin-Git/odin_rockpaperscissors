@@ -3,21 +3,25 @@ html {
 }
 
 body {
-    min-height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: lightgray;
 }
 
 button {
-    height: 500px;
+    height: 400px;
     width: 500px;
     font-size: 100px;
     border-radius: 20px;
     border-style: solid;
     border-color: black;
     transition-duration: 0.4s;
+}
+
+#container{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 button:hover{
@@ -31,11 +35,22 @@ button:active{
 #textContainer{
     margin-top: 20px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    width: 100%;
 }
 
-#scoreContainer, #roundContainer{
+.scoreContainer, #roundContainer{
     width: 20%;
     height: 200px;
+    text-align: center;
+}
+
+#gameResult{
+    font-size: 100px;
+    color: red;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
 }
