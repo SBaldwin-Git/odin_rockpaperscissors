@@ -3,12 +3,21 @@ let playerWins = 0;
 let computerWins = 0;
 let draws = 0;
 
-//Buttons Variables
+//Add Event Listeners
+document.querySelector('#rockBtn').addEventListener("click", function (){
+    game("rock");
+});
+document.querySelector('#paperBtn').addEventListener("click",function (){
+    game("paper");
+});
+document.querySelector('#scissorsBtn').addEventListener("click", function (){
+    game("scissors");
+});
 
 //Prompts player to select and calls playRound Function
-function game() {
+function game(playerPick) {
 
-    const playerSelection = prompt("Please pick Rock, Paper or Scissors.").toLowerCase();
+    const playerSelection = playerPick.toLowerCase();
     const computerSelection = computerPlay();
 
     console.log("The player chose " + playerSelection);
